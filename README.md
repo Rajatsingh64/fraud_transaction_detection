@@ -1,12 +1,12 @@
 ![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange?style=for-the-badge&logo=github) 
 
 <p align="center">
-  <img src="demo/assets/title_image.png" alt="Fraud Transaction Detection" width="1000" height="500"/>
+  <img src="demo/assets/title_image.png" alt="Fraud Transaction Detection" width="1000" height="600"/>
 </p>
 
 ## 📂 Project Navigation  
 
-📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Projects Details**](project details/Fraud Transaction Detection.pdf)
+📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Projects Details**](project details/)
 
 ### 📌 Project Overview
 
