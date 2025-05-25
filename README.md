@@ -6,7 +6,7 @@
 
 ## 📂 Project Navigation  
 
-📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Project Details**](project_details/) | 📁 [**Documents**](docs/)
+📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Project Details**](project_details/) | 📁 [**Documents**](project_details/documents/)
 
 ---
 ### 📌 Project Overview
@@ -24,9 +24,8 @@ Fraud-Transaction-Detection/
 │
 |── dataset/                                   # 📂 Contains Project Dataset
 |
-├── project_details/                           # 📂 Contains Project Problem Statement and Info
-|
-├── docs/                                      # 📂 Contains Project Reports(HLD, LLD,DPR ,etc.)
+├── project_details/                           # 📂 Contains Project info and reports
+|   └── documents/                             # Project Reports(HLD, LLD,DPR ,etc.)
 |
 ├── .dockerignore                              # 🚫 Ignore files for Docker
 ├── .env                                       # 🔑 Environment variables
