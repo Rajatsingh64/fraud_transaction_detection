@@ -1,14 +1,16 @@
 ![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange?style=for-the-badge&logo=github) 
 
 <p align="center">
-  <img src="demo/assets/title_image.png" alt="Fraud Transaction Detection" width="1000" height="500"/>
+  <img src="demo/assets/title_image.png" alt="Fraud Transaction Detection" width="800" height="400"/>
 </p>
 
 ## 📂 Project Navigation  
 
-📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Projects Details**](project_details/)
+📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Project Details**](project_details/)
 
 ### 📌 Project Overview
+
+- **Python Version : 3.12**
 
 Detecting fraudulent card transactions using machine learning techniques to enhance the security of online and ATM transactions for banks
 
