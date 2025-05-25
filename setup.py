@@ -42,7 +42,7 @@ print(requirement_list)
 setup(name="src" ,
       author="Rajat Singh",
       author_email="rajat.k.singh64@gmail.com" ,
-      version="0.0.1" ,
+      version="0.1" ,
       packages=find_packages() ,
       install_requires=get_requirements()
       )

@@ -1,12 +1,12 @@
 ![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange?style=for-the-badge&logo=github) 
 
 <p align="center">
-  <img src="demo/assets/title_image.png" alt="Fraud Transaction Detection" width="1000" height="600"/>
+  <img src="demo/assets/title_image.png" alt="Fraud Transaction Detection" width="1000" height="500"/>
 </p>
 
 ## 📂 Project Navigation  
 
-📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Projects Details**](project details/)
+📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Projects Details**](project_details/)
 
 ### 📌 Project Overview
 
@@ -19,6 +19,10 @@ Detecting fraudulent card transactions using machine learning techniques to enha
 Fraud-Transaction-Detection/
 │
 |── dataset/                                   # 📂 Contains Project Dataset
+|
+├── project_details/                           # 📂 Contains Project Problem Statement and Info
+|
+├── docs/                                      # 📂 Contains Project Reports(HLD, LLD,DPR ,etc.)
 |
 ├── .dockerignore                              # 🚫 Ignore files for Docker
 ├── .env                                       # 🔑 Environment variables
@@ -37,6 +41,8 @@ Fraud-Transaction-Detection/
 │       ├── batch_prediction_pipeline.py       # 🔍 Airflow DAG for prediction
 │       └── training_pipeline.py               # 🎯 Airflow DAG for model training
 │
+├── start.sh                                   #  Initialize the Airflow database
+|                                 
 ├── artifact/                                  # 🐂 Contains all intermediate and final outputs
 ├── predictions/                               # 📂 Predictions processed files
 ├── data_dump.py                               # 🛋️ Dumps data into MongoDB Atlas
@@ -53,7 +59,7 @@ Fraud-Transaction-Detection/
 ├── requirements.txt                           # 📌 Dependencies for the project
 ├── saved_models/                              # 🎯 Production-ready models and transformers
 ├── setup.py                                   # ⚙️ Package setup for `src`
-│
+|
 ├── src/
 │   ├── components/                            # 🏢 Core pipeline components
 │   │   ├── data_ingestion.py                  # 📅 Handles data collection
@@ -76,3 +82,4 @@ Fraud-Transaction-Detection/
 │   │
 │   └── utils.py                               # 🛠️ Utility functions
 ```
+---
