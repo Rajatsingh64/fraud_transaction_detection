@@ -6,7 +6,7 @@
 
 ## 📂 Project Navigation  
 
-📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Project Details**](project_details/)
+📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Project Details**](project_details/)| 📁 [**Documents**](docs/)
 
 ### 📌 Project Overview
 
