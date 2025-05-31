@@ -6,4 +6,6 @@ scikit-learn==1.5.2
 xgboost==1.6.2
 pymongo
 python-dotenv
+imblearn
+flask
 -e .

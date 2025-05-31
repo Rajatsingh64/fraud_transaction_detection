@@ -28,6 +28,8 @@ try:
     logging.info("Successfully connected to MongoDB Atlas database.")
     print("Successfully connected to MongoDB Atlas database.")
 
+    TARGET_COLUMN="TX_FRAUD"
+    REALTIME_FEATURES=["CUSTOMER_ID" , "TERMINAL_ID" , "TX_AMOUNT" , "TX_DATETIME"]
 
 except Exception as e:
     # Raise a custom exception with detailed error info

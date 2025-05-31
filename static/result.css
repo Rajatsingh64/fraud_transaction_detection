@@ -1,0 +1,131 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.result-container {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Prediction text styles with glow animation */
+
+.prediction {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.prediction.safe {
+    color: #4CAF50;
+    text-shadow:
+        0 0 4px #4caf50,
+        0 0 8px #4caf50,
+        0 0 12px #a5d6a7;
+}
+
+.prediction.fraud {
+    color: #ff4c4c;
+    text-shadow:
+        0 0 4px #ff4c4c,
+        0 0 8px #ff1a1a,
+        0 0 12px #cc0000;
+}
+
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Details pre block */
+.details {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    color: #ddd;
+    white-space: pre-wrap;
+}
+
+/* Toggle button */
+.toggle-btn {
+    background-color: #ff4c4c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #e63a3a;
+}
+
+.predict-again {
+    display: inline-block;
+    margin-top: 25px;
+    font-weight: bold;
+    color: #ff4c4c;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.predict-again:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #ff4c4c;
+}
+
+
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+ }
+
+footer a {
+    color: #ff4c4c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.home-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}

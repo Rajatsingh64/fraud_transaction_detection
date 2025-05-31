@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}" />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="result-container">
+        <h1 class="prediction {% if result == 'Safe' %}safe{% else %}fraud{% endif %}">
+            🔍 Prediction: <strong>{{ result }}</strong>
+        </h1>
+
+        <button id="toggle-details" class="toggle-btn" aria-pressed="false" aria-expanded="false" aria-controls="details">
+            Show Details
+        </button>
+        
+        <pre id="details" class="details" style="display:none;">{{ final_features | tojson(indent=4) }}</pre>
+
+        <a href="/predict" class="predict-again">🔁 Predict Again</a>
+    </div>
+
+    <footer>
+        <a href="/" class="home-btn" aria-label="Go to Home Page"><i class="fas fa-home"></i> Home</a>
+        <p>Created by Rajat Singh</p>
+        <p>
+            <a href="mailto:rajat.k.singh64@gmail.com">rajat.k.singh64@gmail.com</a> &nbsp;|&nbsp;
+            <a href="https://github.com/Rajatsingh64" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+            </a> &nbsp;|&nbsp;
+            <a href="https://www.linkedin.com/in/rajat-singh-292124240" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-details');
+        const details = document.getElementById('details');
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = details.style.display === 'none';
+            details.style.display = isHidden ? 'block' : 'none';
+            toggleBtn.textContent = isHidden ? 'Hide Details' : 'Show Details';
+            toggleBtn.setAttribute('aria-pressed', isHidden);
+            toggleBtn.setAttribute('aria-expanded', isHidden);
+        });
+    </script>
+</body>
+</html>

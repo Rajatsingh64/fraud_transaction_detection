@@ -24,8 +24,14 @@ Fraud-Transaction-Detection/
 │
 |── dataset/                                   # 📂 Contains Project Dataset
 |
+|── templates/                                 # 📂 Contains HTML files for the app's structure
+|   └── predict.html
+|
+|── static/                                    # 📂 Contains CSS files for styling the app
+|   └── style.css
+|
 ├── project_details/                           # 📂 Contains Project info and reports
-|   └── documents/                             # Project Reports(HLD, LLD,DPR ,etc.)
+|   └── documents/                             # 📖 Project Reports(HLD, LLD,DPR ,etc.)
 |
 ├── .dockerignore                              # 🚫 Ignore files for Docker
 ├── .env                                       # 🔑 Environment variables
@@ -67,7 +73,8 @@ Fraud-Transaction-Detection/
 │   ├── components/                            # 🏢 Core pipeline components
 │   │   ├── data_ingestion.py                  # 📅 Handles data collection
 │   │   ├── data_transformation.py             # 🔄 Prepares data for training
-│   │   ├── data_validation.py                 # ✅ Validates raw data
+│   │   ├── feature_engineering.py             # 🔄 Generate new features for training
+|   |   |── data_validation.py                 # ✅ Validates raw data
 │   │   ├── model_evaluation.py                # 📊 Evaluates the model
 │   │   ├── model_pusher.py                    # 🚀 Pushes the trained model to deployment
 │   │   ├── model_training.py                  # 🎓 Trains the machine learning model

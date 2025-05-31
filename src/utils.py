@@ -2,6 +2,9 @@ import pandas as pd
 import numpy as np
 import os  , sys
 import pickle
+from src.exception import SrcException
+from src.config import mongo_client
+from pymongo import DESCENDING
 
 
 #for data ingestion
@@ -54,3 +57,53 @@ def read_from_files(DIR_INPUT, BEGIN_DATE, END_DATE):
     df_final=df_final.replace([-1],0)
     
     return df_final
+
+
+#############################
+# Data Extractor
+##############################
+
+def get_relevant_past_df(query, database_name, collection_name):
+    """
+    Fetch historical transactions from MongoDB based on a given query.
+
+    Args:
+        query (dict): MongoDB query to filter documents (e.g., by CUSTOMER_ID or TERMINAL_ID).
+        database_name (str): Name of the MongoDB database.
+        collection_name (str): Name of the collection within the database.
+        limit (int, optional): Maximum number of documents to fetch. Defaults to 1000.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the retrieved documents (excluding MongoDB _id field).
+
+    Example Query:
+        query = {
+            "$or": [
+                {"CUSTOMER_ID": 12345},
+                {"TERMINAL_ID": 67890}
+            ]
+        }
+    """
+    try:
+        # Access the specified MongoDB collection
+        collection = mongo_client[database_name][collection_name]
+
+        # Exclude MongoDB's default _id field
+        projection = {"_id": 0}
+
+        # Fetch documents using the query and projection
+        cursor = collection.find(query, projection)
+        results = list(cursor)
+
+        # Convert the results to a DataFrame
+        return pd.DataFrame(results)
+
+    except Exception as e:
+        raise SrcException(e,sys)
+
+def store_prediction_records_to_database(mongo_client, database_name, collection_name, data):
+    try:
+        mongo_client[database_name][collection_name].insert_one(data)
+        print("Prediction data successfully dumped into database")
+    except Exception as e:
+        raise SrcException(e, sys)
