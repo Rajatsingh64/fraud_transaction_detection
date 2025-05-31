@@ -8,16 +8,15 @@
 
 📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Project Details**](project_details/) | 📁 [**Documents**](project_details/documents/)
 
----
 ### 📌 Project Overview
 
 - **Python Version : 3.12**
 
 Detecting fraudulent card transactions using machine learning techniques to enhance the security of online and ATM transactions for banks
 
+---
 ![Fraud Detection App](demo/assets/gif_demo1.gif)
 
----
 ## 💁️ Project Structure
 
 ```
