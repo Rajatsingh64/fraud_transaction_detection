@@ -1,10 +1,8 @@
+![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange?style=for-the-badge&logo=github) 
+
 <p align="center">
   <img src="demo/assets/title.png" alt="Project Banner" width="100%" style="max-width:800px; display:block; margin:auto;">
 </p>
-
-![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange?style=for-the-badge&logo=github) 
-
-![Fraud Detection App](demo/assets/gif_demo1.gif)
 
 ## 📂 Project Navigation  
 
@@ -16,6 +14,8 @@
 - **Python Version : 3.12**
 
 Detecting fraudulent card transactions using machine learning techniques to enhance the security of online and ATM transactions for banks
+
+![Fraud Detection App](demo/assets/gif_demo1.gif)
 
 ---
 ## 💁️ Project Structure
