@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from src.config import TARGET_COLUMN, mongo_client
+from src.config import TARGET_COLUMN, mongo_client ,database_name
 import pandas as pd
 import dill
 from src.utils import get_relevant_past_df, store_prediction_records_to_database
@@ -46,7 +46,7 @@ def predict():
             }
             past_df = get_relevant_past_df(
                 query=query,
-                database_name="cards",
+                database_name=database_name,
                 collection_name="transactions"
             )
 
@@ -72,9 +72,14 @@ def predict():
             final_features[TARGET_COLUMN] = result
             final_features_dict = final_features.to_dict(orient='records')[0]
 
+            # Let's store the prediction input records in the database, including the original input data.
+            if "TERMINAL_ID" not in final_features_dict:
+                input_data_dict = input_data.to_dict(orient='records')[0]
+                final_features_dict = final_features_dict | input_data_dict 
+
             store_prediction_records_to_database(
                 mongo_client=mongo_client,
-                database_name="cards",
+                database_name=database_name,
                 collection_name="latest_transactions",
                 data=final_features_dict
             )
@@ -96,4 +101,4 @@ def predict():
 # Run app
 # -------------------------
 if __name__ == "__main__":
-    app.run(debug=False, port=5000)
+    app.run(debug=True, port=5000)

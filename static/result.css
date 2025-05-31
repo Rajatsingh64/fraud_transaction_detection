@@ -31,19 +31,18 @@ body {
 .prediction.safe {
     color: #4CAF50;
     text-shadow:
-        0 0 4px #4caf50,
-        0 0 8px #4caf50,
-        0 0 12px #a5d6a7;
+        0 0 1px #4caf50,
+        0 0 2px #81c784;
+    font-weight: bold;
 }
 
 .prediction.fraud {
     color: #ff4c4c;
     text-shadow:
-        0 0 4px #ff4c4c,
-        0 0 8px #ff1a1a,
-        0 0 12px #cc0000;
+        0 0 1px #ff4c4c,
+        0 0 2px #e53935;
+    font-weight: bold;
 }
-
 
 /* Pulse animation */
 @keyframes pulse {

@@ -15,6 +15,7 @@ try:
     # Define a dataclass to store environment variables
     class EnvironmentVariables:
         mongo_url: str = os.getenv("MONGO_URL")
+        database_name:str=os.getenv("DATABASE_NAME")
 
     # Create an instance of the environment variables class
     env = EnvironmentVariables()
@@ -24,6 +25,7 @@ try:
     print("Connecting to MongoDB Atlas database...")
 
     mongo_client = pm.MongoClient(env.mongo_url)
+    database_name=env.database_name
 
     logging.info("Successfully connected to MongoDB Atlas database.")
     print("Successfully connected to MongoDB Atlas database.")

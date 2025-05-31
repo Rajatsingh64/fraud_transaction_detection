@@ -1,12 +1,11 @@
 from src.logger import logging
 from src.exception import SrcException
-from src.config import mongo_client
+from src.config import mongo_client , database_name
 import pandas as pd
 import os, sys
 
 # Define file path and MongoDB details
 file_path = "dataset/card_fraud.csv"
-database_name = "cards"
 collection_name = "transactions"
 
 try:

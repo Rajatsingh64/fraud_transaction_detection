@@ -1,7 +1,7 @@
 ![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange?style=for-the-badge&logo=github) 
 
 <p align="center">
-  <img src="demo/assets/title_image.png" alt="Fraud Transaction Detection" width="900" height="600"/>
+  <img src="demo/assets/gif_demo1.gif" alt="Fraud Transaction Detection" width="1200" height="800"/>
 </p>
 
 ## 📂 Project Navigation  
