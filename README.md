@@ -1,22 +1,38 @@
-![Project Status](https://img.shields.io/badge/Project%20Status-Ongoing-orange?style=for-the-badge&logo=github) 
-
+<!-- Centered Title Banner -->
 <p align="center">
   <img src="demo/assets/title.png" alt="Project Banner" width="100%" style="max-width:800px; display:block; margin:auto;">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Project%20Status-Ongoing-E50914?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.12-E50914?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/MLflow-Used-E50914?style=for-the-badge&logo=mlflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/Apache_Airflow-Operations-E50914?style=for-the-badge&logo=apache-airflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-Deployed-E50914?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS_S3-Model_Storage-E50914?style=for-the-badge&logo=amazon-s3&logoColor=white" />
+  <img src="https://img.shields.io/badge/Continuous_Training-Github_Actions-E50914?style=for-the-badge&logo=github-actions&logoColor=white" />
+</p>
+
 ## 📂 Project Navigation  
 
-📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) |  📁 [**Components**](src/components) |  📁 [**Project Details**](project_details/) | 📁 [**Documents**](project_details/documents/)
+📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Components**](src/components) | 📁 [**Project Details**](project_details/) | 📁 [**Documents**](project_details/documents/)
 
 ### 📌 Project Overview
 
-- **Python Version : 3.12**
-
-Detecting fraudulent card transactions using machine learning techniques to enhance the security of online and ATM transactions for banks
+- **Python Version**: 3.12  
+- Detecting **fraudulent card transactions** using machine learning techniques to enhance the security of online and ATM transactions for banks.
+- The system:
+  - Logs experiments using **MLflow**
+  - Automates training with **Apache Airflow**
+  - Fetches the **latest trained model** from **AWS S3**
+  - Supports **continuous learning**
+  - Deployed via **AWS Cloud Services**
 
 ---
+
 ![Fraud Detection App](demo/assets/gif_demo1.gif)
 
+---
 ## 💁️ Project Structure
 
 ```
@@ -94,3 +110,29 @@ Fraud-Transaction-Detection/
 │   └── utils.py                               # 🛠️ Utility functions
 ```
 ---
+
+## 🚀 Connect with Me
+
+<p align="center">
+
+  <a href="https://github.com/Rajatsingh64" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-8B0000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/rajat-singh-292124240" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="mailto:rajat.k.singh64@gmail.com">
+    <img src="https://img.shields.io/badge/Email-8B0000?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+
+</p>
+
+<p align="center">
+  💻 Developed by <strong>Rajat Singh</strong> | ⚡ Powered by Passion & Code  
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Thanks+for+visiting!;Happy+Coding!+🚀" alt="Typing SVG" />
+</p>
