@@ -1,16 +1,19 @@
+<img src="https://img.shields.io/badge/Project_Status-Ongoing-blue?style=for-the-badge" />
+
 <!-- Centered Title Banner -->
 <p align="center">
   <img src="demo/assets/title.png" alt="Project Banner" width="100%" style="max-width:800px; display:block; margin:auto;">
 </p>
 
+
+<!-- Shield.io Badges Flow (Dark Theme, No Gaps) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Project%20Status-Ongoing-E50914?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3.12-E50914?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/MLflow-Used-E50914?style=for-the-badge&logo=mlflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Apache_Airflow-Operations-E50914?style=for-the-badge&logo=apache-airflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS-Deployed-E50914?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS_S3-Model_Storage-E50914?style=for-the-badge&logo=amazon-s3&logoColor=white" />
-  <img src="https://img.shields.io/badge/Continuous_Training-Github_Actions-E50914?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Used-MLflow-black?style=for-the-badge&logo=mlflow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Operations-Apache%20Airflow-black?style=for-the-badge&logo=apache-airflow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Deployed%20On-AWS-black?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Model%20Storage-S3%20Bucket-black?style=for-the-badge&logo=amazon-s3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Prediction%20Source-Latest%20Model%20from%20S3-black?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Continuous-Training-black?style=for-the-badge&logo=github-actions&logoColor=white"/>
 </p>
 
 ## 📂 Project Navigation  
