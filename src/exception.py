@@ -1,5 +1,7 @@
-import logging 
-import os ,sys
+import sys
+import os
+import logging
+
 
 def error_message_detail(error, error_detail: sys):
     """
@@ -11,7 +13,8 @@ def error_message_detail(error, error_detail: sys):
         file_name, exc_tb.tb_lineno, str(error)
     )
     return error_message
-   
+
+
 class SrcException(Exception):
     """
     Custom exception class to handle errors in the application with detailed error messages.
@@ -22,9 +25,8 @@ class SrcException(Exception):
         """
         self.error_message = error_message_detail(error_message, error_detail=error_detail)
 
-
-
-def __str__(self):
+        
+    def __str__(self):
         """
         Return the error message string when the exception is raised.
         """

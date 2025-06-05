@@ -4,11 +4,9 @@ import os  , sys
 import pickle
 from src.exception import SrcException
 from src.config import mongo_client
-from pymongo import DESCENDING
+import yaml
 
-
-#for data ingestion
-def get_collection_as_dataframe(mongo_client, database_name, collection_name):
+def get_collection_as_dataframe(database_name, collection_name):
     """
     This function extracts data from a MongoDB collection and returns it as a pandas DataFrame.
 
@@ -32,11 +30,11 @@ def get_collection_as_dataframe(mongo_client, database_name, collection_name):
         if "_id" in df.columns:
             df.drop("_id", axis=1, inplace=True)
         
-        return df  # Return the dataframe
+        return df  
 
     except Exception as e:
-        print(f"Error: {e}")  # Print the exception if anything goes wrong
-        return pd.DataFrame()  # Return an empty DataFrame in case of an error
+        print(f"Error: {e}")  
+        return pd.DataFrame()  
 
 # Load a set of pickle files, put them together in a single DataFrame, and order them by time
 # It takes as input the folder DIR_INPUT where the files are stored, and the BEGIN_DATE and END_DATE
@@ -105,5 +103,15 @@ def store_prediction_records_to_database(mongo_client, database_name, collection
     try:
         mongo_client[database_name][collection_name].insert_one(data)
         print("Prediction data successfully dumped into database")
+    except Exception as e:
+        raise SrcException(e, sys)
+    
+
+def write_yaml_file(file_path,data:dict):
+    try:
+        file_dir = os.path.dirname(file_path)
+        os.makedirs(file_dir,exist_ok=True)
+        with open(file_path,"w") as file_writer:
+            yaml.dump(data,file_writer)
     except Exception as e:
         raise SrcException(e, sys)

@@ -15,6 +15,8 @@ required_columns = REALTIME_FEATURES + ([TARGET_COLUMN] if isinstance(TARGET_COL
 def create_is_night_tx(df):
     """Flag transactions that occur at night (0–6 AM)."""
     df = df.copy()
+    if "TX_HOUR" not in df.columns:
+        df["TX_HOUR"]=df["TX_DATETIME"].dt.hour
     df['IS_NIGHT_TX'] = df['TX_HOUR'].apply(lambda x: 1 if x < 6 else 0)
     return df
 
@@ -209,8 +211,6 @@ def generate_features(current_df: pd.DataFrame,
         raise ValueError("`current_df` must be a non-empty DataFrame")
 
     try:
-        current_df = add_weekday_features(current_df)
-
         if mode == "prediction":
             
             if past_df is not None and not past_df.empty:
@@ -221,8 +221,6 @@ def generate_features(current_df: pd.DataFrame,
                     past_df = past_df[required_columns].copy()
                 else:
                     past_df = past_df.copy()
-
-                past_df = add_weekday_features(past_df)
 
                 if TARGET_COLUMN not in current_df.columns:
                     current_df[TARGET_COLUMN]=0 #place holder for current prediction 
@@ -249,6 +247,7 @@ def generate_features(current_df: pd.DataFrame,
             raise ValueError("`mode` must be either 'training' or 'prediction'")
 
         # Base features
+        combined_df = add_weekday_features(combined_df)
         combined_df = create_is_night_tx(combined_df)
         combined_df = create_is_weekend_tx(combined_df)
         combined_df = create_is_tx_amount_high(combined_df)

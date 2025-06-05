@@ -5,7 +5,7 @@ import pandas as pd
 import os, sys
 
 # Define file path and MongoDB details
-file_path = "dataset/card_fraud.csv"
+file_path = "dataset/main.csv"
 collection_name = "transactions"
 
 try:

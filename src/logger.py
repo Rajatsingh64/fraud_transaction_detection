@@ -20,3 +20,5 @@ logging.basicConfig(
     format='[%(asctime)s] Line: %(lineno)d | %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
+
+logging.getLogger("numexpr.utils").setLevel(logging.WARNING)
