@@ -13,7 +13,7 @@ class DataIngestion:
         Initializes the DataIngestion class with config
         """
         try:
-            logging.info(f"{'>'*20} Data Ingestion Initiated {'<'*20}")
+            logging.info(f"{'>'*20} Starting Data Ingestion {'<'*20}")
             self.data_ingestion_config = data_ingestion_config
         except Exception as e:
             raise SrcException(e, sys)

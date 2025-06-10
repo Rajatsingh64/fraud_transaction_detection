@@ -16,7 +16,7 @@ class DataValidation:
                  data_ingestion_artifact: artifact_entity.DataIngestionArtifact,
                  data_validation_config: config_entity.DataValidationConfig):
         try:
-            logging.info(f"{'>'*20} Data Validation Initialized {'<'*20}")
+            logging.info(f"{'>'*20} Starting Data Validation {'<'*20}")
             self.data_ingestion_artifact = data_ingestion_artifact
             self.data_validation_config = data_validation_config
             self.validation_error = dict()

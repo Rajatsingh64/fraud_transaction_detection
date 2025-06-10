@@ -30,7 +30,7 @@ class DataPreprocessing:
         except Exception as e:
             raise SrcException(e, sys)
 
-    def balance_majority_minority(self, df: pd.DataFrame, target: str) -> pd.DataFrame:
+    def downsample_split(self, df: pd.DataFrame, target: str) -> pd.DataFrame:
         """
         Downsample the majority class before applying SMOTE.
         """
@@ -82,16 +82,16 @@ class DataPreprocessing:
             df = pd.read_csv(self.feature_engineering_artifact.feature_engineered_data_file_path)
 
             # Drop columns not needed
-            columns_not_required = self.data_preprocessing_config.columns_to_drop
+            columns_to_drop = self.data_preprocessing_config.columns_to_drop
 
             logging.info("Step 2: Balancing classes")
-            train_df, test_df = self.balance_majority_minority(df, TARGET_COLUMN)
+            train_df, test_df = self.downsample_split(df, TARGET_COLUMN)
 
             logging.info("Step 3: Splitting data and dropping unimportant features")
-            X_train = train_df.drop(columns_not_required, axis=1)
+            X_train = train_df.drop(columns_to_drop, axis=1)
             y_train = train_df[TARGET_COLUMN]
 
-            X_test = test_df.drop(columns_not_required, axis=1)
+            X_test = test_df.drop(columns_to_drop, axis=1)
             y_test = test_df[TARGET_COLUMN]
 
             logging.info("Training set before SMOTE:")
@@ -112,12 +112,12 @@ class DataPreprocessing:
             os.makedirs(preprocessing_dataset_dir , exist_ok=True)
 
             logging.info("Step 4: Saving training input and target dataset as dataframe")
-            train_df=pd.concat([X_train_resampled , y_train_resampled])
+            train_df=pd.concat([X_train_resampled , y_train_resampled] , axis=1)
             train_df.to_csv(self.data_preprocessing_config.train_file_path , index=False , header=True)
 
             logging.info("Step 5: Saving testing input and target dataset as dataframe")
-            test_df=pd.concat([X_test , y_test])
-            test_df.to_csv(self.data_preprocessing_config.train_file_path , index=False , header=True)
+            test_df=pd.concat([X_test , y_test] , axis=1)
+            test_df.to_csv(self.data_preprocessing_config.test_file_path , index=False , header=True)
             
             data_preprocessing_artifact = artifact_entity.DataPreprocessingArtifact(
                 train_file_path=self.data_preprocessing_config.train_file_path,

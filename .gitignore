@@ -176,4 +176,5 @@ saved_models/
 predictions/
 artifacts/
 logs/
+.vscode/
 

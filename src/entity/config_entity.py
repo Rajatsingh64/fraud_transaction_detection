@@ -105,12 +105,18 @@ class DataPreprocessingConfig:
         ]
 
 class ModelTrainingConfig:
-    def __init__(self,training_pipeline_config: TrainingPipelineConfig):
-        
-        self.model_training_dir=os.path.join(training_pipeline_config.artifact_directory , "model_training")
-        self.model_object_file_path=os.path.join(self.model_training_dir , "model.pkl")
-        self.f1_expected_score=0.8
-        self.overfitting_threshold=0.1
-        self.precision_recall_performance_plot_path=os.path.join(self.model_training_dir , "precision_recall_performance.png")
-        self.top_features_file_path=os.path.join(self.model_training_dir , "trained_features" , "top_features.pkl")
-        self.top_features_plot_file_path=os.path.join(self.model_training_dir ,"trained_features" , "top_features.png")
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig, enable_hyperparameter_tuning: bool = False):
+        self.model_training_dir = os.path.join(training_pipeline_config.artifact_directory, "model_training")
+
+       # Toggle for hyperparameter tuning
+        self.enable_hyperparameter_tuning=False
+        # Paths for saving model, features, and plots
+        self.model_object_file_path = os.path.join(self.model_training_dir, "model.pkl")
+        self.top_features_file_path = os.path.join(self.model_training_dir, "trained_features", "top_features.pkl")
+        self.top_features_plot_file_path = os.path.join(self.model_training_dir, "trained_features", "top_features.png")
+        self.precision_recall_performance_plot_path = os.path.join(self.model_training_dir, "precision_recall_performance.png")
+
+        # Performance constraints
+        self.f1_expected_score = 0.8
+        self.overfitting_threshold = 0.1
+
