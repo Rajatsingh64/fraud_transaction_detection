@@ -5,7 +5,8 @@ from src.components import (
     data_ingestion,
     data_validation,
     feature_engineering,
-    data_preprocessing
+    data_preprocessing , 
+    model_training
 )
 import os
 import sys
@@ -63,5 +64,19 @@ if __name__ == "__main__":
         print("Data Preprocessing Pipeline completed successfully.")
         logging.info("Data Preprocessing Pipeline completed successfully.")
 
+        # --------------------- Model Training ---------------------
+        model_training_config = config_entity.ModelTrainingConfig(
+            training_pipeline_config=training_pipeline_config
+        )
+        model_training_ = model_training.ModelTrainer(
+            model_training_config=model_training_config,
+            data_preprocessing_artifact=data_preprocessing_artifact
+        )
+        model_training_artifact=model_training_.initiate_model_training()
+        print("Model Training Pipeline completed successfully.")
+        logging.info("Model Training Pipeline completed successfully.")
+
+        # --------------------- Model Evaluation ---------------------
+    
     except Exception as e:
         raise SrcException(e, sys)

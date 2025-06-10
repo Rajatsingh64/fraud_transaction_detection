@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.utils import resample
 from imblearn.over_sampling import SMOTE
 from src.config import TARGET_COLUMN
-from src.utils import save_numpy_array_data
+
 from src.entity import config_entity, artifact_entity
 
 warnings.filterwarnings("ignore")
@@ -107,21 +107,18 @@ class DataPreprocessing:
             logging.info("Test set distribution (unchanged):")
             logging.info(y_test.value_counts())
 
-            logging.info("Step 4: Converting datasets to NumPy arrays")
-            train_arr = np.c_[X_train_resampled, y_train_resampled]
-            test_arr = np.c_[X_test, y_test]
+            logging.info("Creating dataset folder if not available inside data preprocessing")
+            preprocessing_dataset_dir=os.path.dirname(self.data_preprocessing_config.train_file_path)
+            os.makedirs(preprocessing_dataset_dir , exist_ok=True)
 
-            logging.info("Step 5: Saving training and testing arrays as NumPy files")
-            save_numpy_array_data(
-                file_path=self.data_preprocessing_config.train_file_path,
-                array=train_arr
-            )
+            logging.info("Step 4: Saving training input and target dataset as dataframe")
+            train_df=pd.concat([X_train_resampled , y_train_resampled])
+            train_df.to_csv(self.data_preprocessing_config.train_file_path , index=False , header=True)
 
-            save_numpy_array_data(
-                file_path=self.data_preprocessing_config.test_file_path,
-                array=test_arr
-            )
-
+            logging.info("Step 5: Saving testing input and target dataset as dataframe")
+            test_df=pd.concat([X_test , y_test])
+            test_df.to_csv(self.data_preprocessing_config.train_file_path , index=False , header=True)
+            
             data_preprocessing_artifact = artifact_entity.DataPreprocessingArtifact(
                 train_file_path=self.data_preprocessing_config.train_file_path,
                 test_file_path=self.data_preprocessing_config.test_file_path

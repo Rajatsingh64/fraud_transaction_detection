@@ -33,3 +33,15 @@ class DataPreprocessingArtifact:
     """
     train_file_path: str
     test_file_path: str
+
+class ModelTrainingArtifact:
+    """
+    Stores the paths to trained model and top features after model training.
+    """
+    model_object_file_path: str
+    train_f1_score: float
+    test_f1_score: float
+    precision_recall_performance_plot_file_path: str
+    top_features_object_file_path: str
+    top_feature_plot_file_path: str
+

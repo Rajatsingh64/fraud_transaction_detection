@@ -3,8 +3,10 @@ import numpy as np
 import os  , sys
 import pickle
 from src.exception import SrcException
+from src.logger import logging
 from src.config import mongo_client
 import yaml
+import dill
 
 def get_collection_as_dataframe(database_name, collection_name):
     """
@@ -116,45 +118,53 @@ def write_yaml_file(file_path,data:dict):
     except Exception as e:
         raise SrcException(e, sys)
     
-def save_numpy_array_data(file_path: str, array: np.array):
+def save_object(file_path: str, obj: object) -> None:
     """
-    Saves a NumPy array to a file.
+    Saves a Python object to a file using dill for serialization.
 
     Parameters:
-        file_path (str): The location where the NumPy array will be saved.
-        array (np.array): The NumPy array to save.
+        file_path (str): The file path where the object will be saved.
+        obj (object): The Python object to be serialized and saved.
 
     Process:
-        - Ensures the directory for the file exists.
-        - Saves the array to the file in binary format.
+        - Logs entry into the method.
+        - Ensures the directory exists.
+        - Serializes and saves the object to the file.
+        - Logs exit from the method.
     """
     try:
-        dir_path = os.path.dirname(file_path)
-        os.makedirs(dir_path, exist_ok=True)
+        logging.info("Entered the save_object method of utils")
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
         with open(file_path, "wb") as file_obj:
-            np.save(file_obj, array)
+            dill.dump(obj, file_obj)
+
+        logging.info("Exited the save_object method of utils")
 
     except Exception as e:
-        raise SrcException(e, sys) 
-    
-def load_numpy_array_data(file_path: str) -> np.array:
+        raise SrcException(e, sys) from e
+
+
+def load_object(file_path: str) -> object:
     """
-    Loads a NumPy array from a file.
+    Loads and returns a Python object from a file using dill.
 
     Parameters:
-        file_path (str): The location of the file containing the NumPy array.
+        file_path (str): The file path from where the object will be loaded.
 
     Returns:
-        np.array: The loaded NumPy array.
+        object: The deserialized Python object.
 
     Process:
-        - Opens the file in binary read mode.
-        - Loads and returns the NumPy array.
+        - Checks if the file exists.
+        - Opens the file and loads the object.
     """
     try:
+        if not os.path.exists(file_path):
+            raise Exception(f"The file: {file_path} does not exist")
+
         with open(file_path, "rb") as file_obj:
-            return np.load(file_obj)
+            return dill.load(file_obj)
 
     except Exception as e:
         raise SrcException(e, sys) 

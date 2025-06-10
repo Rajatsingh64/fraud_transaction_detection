@@ -91,11 +91,11 @@ class DataPreprocessingConfig:
 
         # Paths to save processed training and test data as NumPy arrays
         self.train_file_path = os.path.join(
-            self.data_preprocessing_dir, "dataset", "train.npz"
+            self.data_preprocessing_dir, "dataset", "train.csv"
         )
 
         self.test_file_path = os.path.join(
-            self.data_preprocessing_dir, "dataset", "test.npz"
+            self.data_preprocessing_dir, "dataset", "test.csv"
         )
 
         # Columns to exclude from model training
@@ -103,3 +103,14 @@ class DataPreprocessingConfig:
             'TRANSACTION_ID', 'CUSTOMER_ID', 'TERMINAL_ID',
             'TX_AMOUNT', 'TX_DATETIME', 'TX_FRAUD'
         ]
+
+class ModelTrainingConfig:
+    def __init__(self,training_pipeline_config: TrainingPipelineConfig):
+        
+        self.model_training_dir=os.path.join(training_pipeline_config.artifact_directory , "model_training")
+        self.model_object_file_path=os.path.join(self.model_training_dir , "model.pkl")
+        self.f1_expected_score=0.8
+        self.overfitting_threshold=0.1
+        self.precision_recall_performance_plot_path=os.path.join(self.model_training_dir , "precision_recall_performance.png")
+        self.top_features_file_path=os.path.join(self.model_training_dir , "trained_features" , "top_features.pkl")
+        self.top_features_plot_file_path=os.path.join(self.model_training_dir ,"trained_features" , "top_features.png")
