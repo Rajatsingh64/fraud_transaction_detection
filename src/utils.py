@@ -115,3 +115,46 @@ def write_yaml_file(file_path,data:dict):
             yaml.dump(data,file_writer)
     except Exception as e:
         raise SrcException(e, sys)
+    
+def save_numpy_array_data(file_path: str, array: np.array):
+    """
+    Saves a NumPy array to a file.
+
+    Parameters:
+        file_path (str): The location where the NumPy array will be saved.
+        array (np.array): The NumPy array to save.
+
+    Process:
+        - Ensures the directory for the file exists.
+        - Saves the array to the file in binary format.
+    """
+    try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path, exist_ok=True)
+
+        with open(file_path, "wb") as file_obj:
+            np.save(file_obj, array)
+
+    except Exception as e:
+        raise SrcException(e, sys) 
+    
+def load_numpy_array_data(file_path: str) -> np.array:
+    """
+    Loads a NumPy array from a file.
+
+    Parameters:
+        file_path (str): The location of the file containing the NumPy array.
+
+    Returns:
+        np.array: The loaded NumPy array.
+
+    Process:
+        - Opens the file in binary read mode.
+        - Loads and returns the NumPy array.
+    """
+    try:
+        with open(file_path, "rb") as file_obj:
+            return np.load(file_obj)
+
+    except Exception as e:
+        raise SrcException(e, sys) 
