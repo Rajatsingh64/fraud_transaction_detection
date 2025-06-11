@@ -41,12 +41,12 @@ if [ "$1" = "airflow" ]; then
   # Start Airflow webserver
   airflow webserver
 
-# Streamlit section
+# Flask + Gunicorn section
 elif [ "$1" = "app" ]; then
   start_s3_sync  # Perform the S3 sync
 
-  echo "Starting Streamlit app..."
-  exec streamlit run app.py --server.port 8501 --server.address=0.0.0.0 --server.enableCORS false
+  echo "Starting Flask app with Gunicorn..."
+  exec gunicorn app:app --bind 0.0.0.0:8501 --workers 4
 
 else
   echo "Unknown service: $1"
