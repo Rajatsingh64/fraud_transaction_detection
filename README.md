@@ -15,17 +15,15 @@
 </p>
 
 ---
+<p align="center">
+  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="60%" style="max-width:600px; display:block; margin:auto;">
+</p>
+
+<p align="center">
+  <img src="demo/assets/deployment_flowchart.png" alt="MLOPS Flowchart" width="60%" style="max-width:600px; display:block; margin:auto;">
+</p
 ![Fraud Detection App](demo/assets/gif_demo1.gif)
 
-<p align="center">
-  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="100%" style="max-width:800px; display:block; margin:auto;">
-</p>
-
-<p align="center">
-  <img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="100%" style="max-width:800px; display:block; margin:auto;">
-</p>
-
----
 
 ## 📂 Project Navigation  
 
