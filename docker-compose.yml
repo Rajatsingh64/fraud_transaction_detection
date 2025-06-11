@@ -59,6 +59,9 @@ services:
       - "8501:8501"
     environment:
       MONGO_URL: ${MONGO_URL}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_REGION: ${AWS_REGION}
       DATABASE_NAME: ${DATABASE_NAME}
       BUCKET_NAME: ${BUCKET_NAME}
     command: ["app"]

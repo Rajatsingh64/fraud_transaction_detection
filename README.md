@@ -119,6 +119,8 @@ Fraud-Transaction-Detection/
 ├── saved_models/                              # 🎯 Production-ready models and transformers
 ├── setup.py                                   # ⚙️ Package setup for `src`
 |
+|── app.py                                     # Flask Fraud Prediction App 
+|
 ├── src/
 │   ├── components/                            # 🏢 Core pipeline components
 │   │   ├── data_ingestion.py                  # 📅 Handles data collection
@@ -144,9 +146,9 @@ Fraud-Transaction-Detection/
 ```
 ## Deployment Guide
 
-### **Streamlit App Deployment on EC2 using Docker and GitHub Actions**
+### **App Deployment on EC2 using Docker and GitHub Actions**
 
-This guide provides step-by-step commands to deploy a Streamlit app on an EC2 instance using Docker, with automatic deployment through GitHub Actions.
+This guide provides step-by-step commands to deploy a Flask app on an EC2 instance using Docker, with automatic deployment through GitHub Actions.
 
 #### Commands for EC2 Setup and Deployment
 
@@ -172,8 +174,8 @@ newgrp docker
 - `AWS_ECR_LOGIN_URI`=
 - `ECR_REPOSITORY_NAME`=
 - `BUCKET_NAME`=
-- `GOOGLE_CREDENTIALS_B64`= `base64 encoded value`
-- `Table_ID`= `project_id.dataset_name.table_name`
+- `MONGO_URL`= `MongoDB Atlas database url`
+- `DATABASE_NAME`= `MongoDB database name`
 - `AIRFLOW_USERNAME`=
 - `AIRFLOW_PASSWORD`=
 - `AIRFLOW_EMAIL`=
