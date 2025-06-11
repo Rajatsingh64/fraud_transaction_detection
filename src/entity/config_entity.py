@@ -59,7 +59,7 @@ class DataValidationConfig:
         self.missing_columns_threshold = 0.2
 
         # Baseline dataset path (for schema comparison)
-        self.base_file_path = os.path.join("dataset", "main.csv")
+        self.base_file_path = os.path.join("main.csv")
 
 
 class FeatureEngineeringConfig:
@@ -108,7 +108,7 @@ class ModelTrainingConfig:
         self.model_training_dir = os.path.join(training_pipeline_config.artifact_directory, "model_training")
 
        # Toggle for hyperparameter tuning
-        self.enable_hyperparameter_tuning=False
+        self.enable_hyperparameter_tuning=True
         
         # Paths for saving model, features, and plots
         self.model_object_file_path = os.path.join(self.model_training_dir, "model.pkl")

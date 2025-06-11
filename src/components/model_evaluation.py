@@ -57,7 +57,7 @@ class ModelEvaluation:
             logging.info(f"F1 Score (Current Model): {current_score}")
 
             logging.info("Step 7: Comparing current model performance with previous model")
-            if current_score < previous_score:
+            if current_score <= previous_score:
                 logging.info("Current model does not outperform the previous model.")
                 raise Exception("Current model is not better than the previously deployed model.")
 
