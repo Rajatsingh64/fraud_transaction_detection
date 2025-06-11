@@ -109,7 +109,8 @@ class ModelTrainingConfig:
         self.model_training_dir = os.path.join(training_pipeline_config.artifact_directory, "model_training")
 
        # Toggle for hyperparameter tuning
-        self.enable_hyperparameter_tuning=False
+        self.enable_hyperparameter_tuning=True
+        
         # Paths for saving model, features, and plots
         self.model_object_file_path = os.path.join(self.model_training_dir, "model.pkl")
         self.top_features_file_path = os.path.join(self.model_training_dir, "trained_features", "top_features.pkl")

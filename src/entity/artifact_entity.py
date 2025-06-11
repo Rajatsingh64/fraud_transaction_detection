@@ -34,6 +34,7 @@ class DataPreprocessingArtifact:
     train_file_path: str
     test_file_path: str
 
+@dataclass
 class ModelTrainingArtifact:
     """
     Stores the paths to trained model and top features after model training.

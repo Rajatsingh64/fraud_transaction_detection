@@ -87,7 +87,7 @@ class DataPreprocessing:
             logging.info("Step 2: Balancing classes")
             train_df, test_df = self.downsample_split(df, TARGET_COLUMN)
 
-            logging.info("Step 3: Splitting data and dropping unimportant features")
+            logging.info(f"Step 3: Splitting data and dropping unimportant features {columns_to_drop}")
             X_train = train_df.drop(columns_to_drop, axis=1)
             y_train = train_df[TARGET_COLUMN]
 

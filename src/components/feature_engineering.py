@@ -60,6 +60,7 @@ class FeatureEngineering:
             df.drop_duplicates(inplace=True)
 
             logging.info("Step 3: Applying feature engineering on the DataFrame")
+            logging.info(f"Generating new features using these columns: {self.feature_engineering_config.required_column_names}")
             new_df = generate_features(
                 current_df=df,
                 past_df=None,  # For now, no past data provided

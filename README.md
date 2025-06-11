@@ -5,8 +5,6 @@
   <img src="demo/assets/title.png" alt="Project Banner" width="100%" style="max-width:800px; display:block; margin:auto;">
 </p>
 
-
-<!-- Shield.io Badges Flow (Dark Theme, No Gaps) -->
 <p align="center">
   <img src="https://img.shields.io/badge/Used-MLflow-black?style=for-the-badge&logo=mlflow&logoColor=white"/>
   <img src="https://img.shields.io/badge/Operations-Apache%20Airflow-black?style=for-the-badge&logo=apache-airflow&logoColor=white"/>
@@ -15,6 +13,19 @@
   <img src="https://img.shields.io/badge/Prediction%20Source-Latest%20Model%20from%20S3-black?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Continuous-Training-black?style=for-the-badge&logo=github-actions&logoColor=white"/>
 </p>
+
+---
+![Fraud Detection App](demo/assets/gif_demo1.gif)
+
+<p align="center">
+  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="100%" style="max-width:800px; display:block; margin:auto;">
+</p>
+
+<p align="center">
+  <img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="100%" style="max-width:800px; display:block; margin:auto;">
+</p>
+
+---
 
 ## 📂 Project Navigation  
 
@@ -32,28 +43,6 @@
   - Deployed via **AWS Cloud Services**
 
 ---
-
-![Fraud Detection App](demo/assets/gif_demo1.gif)
-
-<div align="center" style="background-color:#1B1B1B; padding:20px; border-radius:10px;">
-
-  <h2 style="color:#E50914;">🚀 Tools and Technologies Used</h2>
-
-  <p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" alt="Seaborn" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" height="40">&nbsp;&nbsp;&nbsp;
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzCIuPsPokbP-V0RFFgCRJqcve5gpjJmTtg&s" alt="Apache Airflow" height="40">
-  </p>
-
-</div>
 
 ## 💁️ Project Structure
 
