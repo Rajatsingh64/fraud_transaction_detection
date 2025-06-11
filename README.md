@@ -16,15 +16,20 @@
 
 ---
 <p align="center">
-  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="60%" style="max-width:600px; display:block; margin:auto;">
+  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="45%" style="max-width:300px; display:block; margin:auto;">
 </p>
 
-<p align="center">
-  <img src="demo/assets/deployment_flowchart.png" alt="MLOPS Flowchart" width="60%" style="max-width:600px; display:block; margin:auto;">
-</p
+<div align="center">
+
+## Deployment Flowchart
+
+<img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="45%" style="max-width:300px; display:block; margin:auto;">
+
+</div>
+
 ![Fraud Detection App](demo/assets/gif_demo1.gif)
 
-
+---
 ## 📂 Project Navigation  
 
 📁 [**Notebooks**](notebook/) | 📁 [**Pipelines**](src/pipeline/) | 📁 [**Components**](src/components) | 📁 [**Project Details**](project_details/) | 📁 [**Documents**](project_details/documents/)
