@@ -27,6 +27,7 @@
 
 </div>
 
+## App Overview:
 ![Fraud Detection App](demo/assets/gif_demo1.gif)
 
 ---
