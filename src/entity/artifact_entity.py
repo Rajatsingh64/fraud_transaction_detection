@@ -43,6 +43,20 @@ class ModelTrainingArtifact:
     train_f1_score: float
     test_f1_score: float
     precision_recall_performance_plot_file_path: str
-    top_features_object_file_path: str
     top_feature_plot_file_path: str
 
+@dataclass
+class ModelEvaluationArtifact:
+    """
+    Stores Model is Accepted or not and Improved Score of Model.
+    """
+    is_model_accepted: bool
+    improved_score: float
+
+@dataclass
+class ModelPusherArtifact:
+    """
+    Stores Latest Model .
+    """
+    pusher_model_dir: str
+    saved_model_dir: str

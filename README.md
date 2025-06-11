@@ -102,7 +102,7 @@ Fraud-Transaction-Detection/
 │
 ├── start.sh                                   #  Initialize the Airflow database
 |                                 
-├── artifact/                                  # 🐂 Contains all intermediate and final outputs
+├── artifacts/                                 # 🐂 Contains all intermediate and final outputs
 ├── predictions/                               # 📂 Predictions processed files
 ├── data_dump.py                               # 🛋️ Dumps data into MongoDB Atlas
 ├── docker-compose.yml                         # 🔧 Docker Compose for multi-container setup
@@ -122,7 +122,7 @@ Fraud-Transaction-Detection/
 ├── src/
 │   ├── components/                            # 🏢 Core pipeline components
 │   │   ├── data_ingestion.py                  # 📅 Handles data collection
-│   │   ├── data_transformation.py             # 🔄 Prepares data for training
+│   │   ├── data_preprocessing.py              # 🔄 Prepares data for training
 │   │   ├── feature_engineering.py             # 🔄 Generate new features for training
 |   |   |── data_validation.py                 # ✅ Validates raw data
 │   │   ├── model_evaluation.py                # 📊 Evaluates the model

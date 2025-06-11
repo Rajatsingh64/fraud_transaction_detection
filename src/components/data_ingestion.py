@@ -48,7 +48,7 @@ class DataIngestion:
                 feature_store_file_path=self.data_ingestion_config.feature_store_file_path
             )
 
-            logging.info(f"Data Ingestion Artifact: {data_ingestion_artifacts}")
+            logging.info(f"Data Ingestion Artifact Created: {data_ingestion_artifacts}")
             return data_ingestion_artifacts
 
         except Exception as e:

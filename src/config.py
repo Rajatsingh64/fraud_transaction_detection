@@ -31,7 +31,7 @@ try:
     print("Successfully connected to MongoDB Atlas database.")
 
     TARGET_COLUMN="TX_FRAUD"
-    REALTIME_FEATURES=["CUSTOMER_ID" , "TERMINAL_ID" , "TX_AMOUNT" , "TX_DATETIME"]
+    REALTIME_FEATURES=["CUSTOMER_ID" , "TERMINAL_ID" , "TX_AMOUNT" , "TX_DATETIME" , "TRANSACTION_ID"]
 
 except Exception as e:
     # Raise a custom exception with detailed error info

@@ -5,7 +5,6 @@ from datetime import datetime
 from src.exception import SrcException 
 from src.config import database_name 
 
-
 class TrainingPipelineConfig:
     def __init__(self):
         try:
@@ -109,11 +108,10 @@ class ModelTrainingConfig:
         self.model_training_dir = os.path.join(training_pipeline_config.artifact_directory, "model_training")
 
        # Toggle for hyperparameter tuning
-        self.enable_hyperparameter_tuning=True
+        self.enable_hyperparameter_tuning=False
         
         # Paths for saving model, features, and plots
         self.model_object_file_path = os.path.join(self.model_training_dir, "model.pkl")
-        self.top_features_file_path = os.path.join(self.model_training_dir, "trained_features", "top_features.pkl")
         self.top_features_plot_file_path = os.path.join(self.model_training_dir, "trained_features", "top_features.png")
         self.precision_recall_performance_plot_path = os.path.join(self.model_training_dir, "precision_recall_performance.png")
 
@@ -121,3 +119,33 @@ class ModelTrainingConfig:
         self.f1_expected_score = 0.8
         self.overfitting_threshold = 0.1
 
+class ModelEvaluationConfig:
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+        
+        # Threshold to determine if the model performance change is significant
+        self.change_threshold = 0.01
+
+class ModelPusherConfig:
+    """
+    Configuration class for setting up paths related to pushing the trained model.
+
+    Attributes:
+        model_pusher_dir (str): Directory for storing pushed model artifacts.
+        saved_model_dir (str): Central directory for versioned saved models.
+        pusher_model_dir (str): Directory under model_pusher_dir for saving model files.
+        pusher_model_file_path (str): Full file path where the model.pkl will be saved.
+    """
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+        # Directory where all model pusher artifacts will be stored
+        self.model_pusher_dir = os.path.join(
+            training_pipeline_config.artifact_directory, "model_pusher"
+        )
+
+        # Global directory for storing versioned production models
+        self.saved_model_dir = os.path.join(os.getcwd(), "saved_models")
+
+        # Subdirectory under model_pusher_dir to hold the actual model file
+        self.pusher_model_dir = os.path.join(self.model_pusher_dir, "saved_models")
+
+        # Full path to the model file that will be saved during the push
+        self.pusher_model_file_path = os.path.join(self.pusher_model_dir, "model.pkl")

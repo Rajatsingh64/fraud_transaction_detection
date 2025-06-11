@@ -97,9 +97,7 @@ class ModelTrainer:
             plt.title('Top XGBoost Feature Importances (Gain)')
             plt.tight_layout()
             plt.savefig(save_path)
-            plt.show()
-
-            return importance_df
+            #plt.show()
 
         except Exception as e:
             raise SrcException(e, sys)
@@ -122,7 +120,7 @@ class ModelTrainer:
             plt.grid(True)
             plt.tight_layout()
             plt.savefig(save_path)
-            plt.show()
+            #plt.show()
 
         except Exception as e:
             raise SrcException(e, sys)
@@ -184,22 +182,22 @@ class ModelTrainer:
                 save_path=self.model_training_config.precision_recall_performance_plot_path
             )
 
-            logging.info("Step 5: Plotting top features")
-            important_df = self.plot_top_features(best_model, 15, self.model_training_config.top_features_plot_file_path)
-            top_feature_names = important_df["feature"].reset_index(drop=True)
-
-            logging.info("Step 6: Saving model and top features")
+            logging.info("Plotting top features")
+            self.plot_top_features(best_model, 15, self.model_training_config.top_features_plot_file_path)
+            
+            logging.info("Step 5: Saving model")
             save_object(self.model_training_config.model_object_file_path, best_model)
-            save_object(self.model_training_config.top_features_file_path, top_feature_names)
-
-            return artifact_entity.ModelTrainingArtifact(
+            
+            model_training_artifact=artifact_entity.ModelTrainingArtifact(
                 model_object_file_path=self.model_training_config.model_object_file_path,
                 train_f1_score=train_f1,
                 test_f1_score=test_f1,
-                top_features_object_file_path=self.model_training_config.top_features_file_path,
-                top_feature_fig_file_path=self.model_training_config.top_features_plot_file_path,
+                top_feature_plot_file_path=self.model_training_config.top_features_plot_file_path,
                 precision_recall_performance_plot_file_path=self.model_training_config.precision_recall_performance_plot_path
             )
+            
+            logging.info(f"Step 6: Model Training Artifact Created: {model_training_artifact}")
+            return model_training_artifact
 
         except Exception as e:
             raise SrcException(e, sys)
