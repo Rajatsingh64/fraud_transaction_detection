@@ -1,6 +1,6 @@
 from src.logger import logging
 from src.exception import SrcException
-from src.pipelines.training_pipeline import run_training_pipeline
+from src.pipeline.training_pipeline import run_training_pipeline
 import os,sys
 
 

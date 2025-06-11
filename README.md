@@ -142,6 +142,52 @@ Fraud-Transaction-Detection/
 │   │
 │   └── utils.py                               # 🛠️ Utility functions
 ```
+## Deployment Guide
+
+### **Streamlit App Deployment on EC2 using Docker and GitHub Actions**
+
+This guide provides step-by-step commands to deploy a Streamlit app on an EC2 instance using Docker, with automatic deployment through GitHub Actions.
+
+#### Commands for EC2 Setup and Deployment
+
+1. **Launch an EC2 Instance** using the AWS Management Console with your preferred settings.
+
+2. **Connect to Your EC2 Instance**:
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+sudo sh get-docker.sh
+
+sudo usermod -aG docker ubuntu
+
+newgrp docker
+```
+
+#### **GitHub Repo Secrets Setup**
+
+- `AWS_ACCESS_KEY_ID`=
+- `AWS_SECRET_ACCESS_KEY`=
+- `AWS_REGION`=
+- `AWS_ECR_LOGIN_URI`=
+- `ECR_REPOSITORY_NAME`=
+- `BUCKET_NAME`=
+- `GOOGLE_CREDENTIALS_B64`= `base64 encoded value`
+- `Table_ID`= `project_id.dataset_name.table_name`
+- `AIRFLOW_USERNAME`=
+- `AIRFLOW_PASSWORD`=
+- `AIRFLOW_EMAIL`=
+
+#### **Run All GitHub Runner Commands in AWS CLI and Activate It**
+
+1. Set Up GitHub Actions Runner on EC2
+2. Navigate to **Settings > Actions > Runners** in your GitHub repository.
+3. Follow the instructions provided by GitHub to download and configure the runner on your EC2 instance.
+
+```bash
+curl -o actions-runner-linux-x64-<version>.tar.gz -L https://github.com/actions/runner/releases/download/v<version>/actions-runner-linux-x64-<version>.tar.gz
+tar xzf actions-runner-linux-x64-<version>.tar.gz
+```
 
 ## 🚀 Connect with Me
 

@@ -2,9 +2,11 @@ from flask import Flask, request, render_template
 from src.config import TARGET_COLUMN, mongo_client ,database_name
 import pandas as pd
 import dill
-from src.utils import get_relevant_past_df, store_prediction_records_to_database
+from src.utils import get_relevant_past_df, store_prediction_records_to_database , load_object
+from src.predictor import ModelResolver
 from src.feature_extractor import generate_features
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
@@ -12,9 +14,8 @@ app = Flask(__name__)
 # -------------------------
 # Load trained ML model
 # -------------------------
-model_path = "notebook/best_model.pkl"
-with open(model_path, 'rb') as file:
-    model = dill.load(file)
+resolver=ModelResolver()
+model=load_object(file_path=resolver.get_latest_model_path())
 
 # -------------------------
 # Home route

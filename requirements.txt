@@ -4,8 +4,19 @@ matplotlib==3.10.0
 seaborn==0.13.2
 scikit-learn==1.5.2
 xgboost==1.6.2
-pymongo
-python-dotenv
-imblearn
-flask
+pymongo==4.11.1
+python-dotenv==0.21.0
+imblearn==0.0
+flask==2.2.5
+apache-airflow
+gunicorn==23.0.0
+azure-storage-blob==12.25.1
+azure-identity==1.23.0
+azure-core==1.34.0
+psycopg2-binary==2.9.10
+requests==2.32.3
+PyYAML==6.0.2
+setuptools==75.8.0
+httptools==0.6.4
+pendulum==3.0.0
 -e .
