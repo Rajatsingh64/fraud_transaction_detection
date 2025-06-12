@@ -1,10 +1,14 @@
-<img src="https://img.shields.io/badge/Project_Status-Completed-green?style=for-the-badge" />
+<!-- Project Status -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Project_Status-Completed-green?style=for-the-badge" />
+</p>
 
 <!-- Centered Title Banner -->
 <p align="center">
   <img src="demo/assets/title.png" alt="Project Banner" width="100%" style="max-width:800px; display:block; margin:auto;">
 </p>
 
+<!-- Key Tech Stack Summary -->
 <p align="center">
   <img src="https://img.shields.io/badge/Used-MLflow-black?style=for-the-badge&logo=mlflow&logoColor=white"/>
   <img src="https://img.shields.io/badge/Operations-Apache%20Airflow-black?style=for-the-badge&logo=apache-airflow&logoColor=white"/>
@@ -14,36 +18,58 @@
   <img src="https://img.shields.io/badge/Continuous-Training-black?style=for-the-badge&logo=github-actions&logoColor=white"/>
 </p>
 
-<div align="center">
+<!-- App Design Documents -->
+<h2 align="center">🛠️ App Design Documents</h2>
 
-## Flowchart
+<p align="center">
+  <a href="docs/HLD.pdf">
+    <img src="https://img.shields.io/badge/View%20HLD-1E90FF?style=for-the-badge&logo=blueprint&logoColor=white" alt="View HLD">
+  </a>
+  <a href="docs/LLD.pdf">
+    <img src="https://img.shields.io/badge/View%20LLD-28a745?style=for-the-badge&logo=markdown&logoColor=white" alt="View LLD">
+  </a>
+  <a href="docs/DPR.pdf">
+    <img src="https://img.shields.io/badge/View%20DPR-FF8C00?style=for-the-badge&logo=processwire&logoColor=white" alt="View DPR">
+  </a>
+  <a href="docs/Architecture.pdf">
+    <img src="https://img.shields.io/badge/View%20Architecture-8A2BE2?style=for-the-badge&logo=archlinux&logoColor=white" alt="View Architecture">
+  </a>
+</p>
+
+<!-- License Badge -->
+<p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT">
+  </a>
+</p>
+
+## 🧠 Flowchart
 
 <p align="center">
   <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="45%" />
   <img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="45%" />
 </p>
 
-## App Overview:
+## 🧾 App Overview
 
-<img src="demo/assets/gif_demo1.gif" alt="Fraud Detection App" />
+<p align="center">
+  <img src="demo/assets/gif_demo1.gif" alt="Fraud Detection App" width="80%" />
+</p>
 
-## Technologies & Frameworks Used
+## 🧰 Technologies & Frameworks Used
 
-<img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Airflow-%23017CEE.svg?style=for-the-badge&logo=apache-airflow&logoColor=white" />
-<img src="https://img.shields.io/badge/AWS-%23232F3E.svg?style=for-the-badge&logo=amazonaws&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Scikit--Learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" />
-<img src="https://img.shields.io/badge/imblearn-%23990000.svg?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Matplotlib-%2311557C.svg?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Seaborn-%233C6F9C.svg?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/VS%20Code-%23007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
-
-
-</div>
-
----
+<p align="center">
+  <img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Airflow-%23017CEE.svg?style=for-the-badge&logo=apache-airflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-%23232F3E.svg?style=for-the-badge&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" />
+  <img src="https://img.shields.io/badge/imblearn-%23990000.svg?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Matplotlib-%2311557C.svg?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Seaborn-%233C6F9C.svg?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/VS%20Code-%23007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+</p>
 
 ## 📂 Project Navigation  
 
@@ -138,6 +164,8 @@ Fraud-Transaction-Detection/
 │   │
 │   └── utils.py                               # 🛠️ Utility functions
 ```
+---
+
 ## Deployment Guide
 
 ### **Airflow(CT) and App Deployment on EC2 using Docker and GitHub Actions**
@@ -184,6 +212,8 @@ newgrp docker
 curl -o actions-runner-linux-x64-<version>.tar.gz -L https://github.com/actions/runner/releases/download/v<version>/actions-runner-linux-x64-<version>.tar.gz
 tar xzf actions-runner-linux-x64-<version>.tar.gz
 ```
+
+---
 
 ## 🚀 Connect with Me
 
