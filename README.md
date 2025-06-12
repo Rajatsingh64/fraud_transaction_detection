@@ -15,17 +15,19 @@
 </p>
 
 ---
-<p align="center">
-  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="45%" style="max-width:300px; display:block; margin:auto;">
-</p>
 
-<div align="center">
-
-## Deployment Flowchart
-
-<img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="45%" style="max-width:300px; display:block; margin:auto;">
+### MLOPS Training Pipeline and Deployment Flowchart
 
 </div>
+p align="center">
+  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="40%" />
+  <img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="40%" />
+</p>
+
+<p align="center">
+  <strong>MLOps Flowchart</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Deployment Flowchart</strong>
+</p>
+
 
 ## App Overview:
 ![Fraud Detection App](demo/assets/gif_demo1.gif)
@@ -146,9 +148,9 @@ Fraud-Transaction-Detection/
 ```
 ## Deployment Guide
 
-### **App Deployment on EC2 using Docker and GitHub Actions**
+### **Airflow(CT) and App Deployment on EC2 using Docker and GitHub Actions**
 
-This guide provides step-by-step commands to deploy a Flask app on an EC2 instance using Docker, with automatic deployment through GitHub Actions.
+This guide provides step-by-step commands to deploy a Flask app and Apache-Airflow Training Pipeline(CT) on an EC2 instance using Docker, with automatic deployment through GitHub Actions.
 
 #### Commands for EC2 Setup and Deployment
 
