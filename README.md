@@ -20,8 +20,8 @@
 
 <!-- App Design Documents -->
 <h2 align="center">🛠️ App Design Documents</h2>
-
 <p align="center">
+<img src="https://img.shields.io/badge/Ongoing-orange?style=for-the-badge" />
   <a href="docs/HLD.pdf">
     <img src="https://img.shields.io/badge/View%20HLD-1E90FF?style=for-the-badge&logo=blueprint&logoColor=white" alt="View HLD">
   </a>
@@ -29,7 +29,7 @@
     <img src="https://img.shields.io/badge/View%20LLD-28a745?style=for-the-badge&logo=markdown&logoColor=white" alt="View LLD">
   </a>
   <a href="docs/DPR.pdf">
-    <img src="https://img.shields.io/badge/View%20DPR-FF8C00?style=for-the-badge&logo=processwire&logoColor=white" alt="View DPR">
+    <img src="https://img.shields.io/badge/View%20DPR-red?style=for-the-badge&logo=processwire&logoColor=white" alt="View DPR">
   </a>
   <a href="docs/Architecture.pdf">
     <img src="https://img.shields.io/badge/View%20Architecture-8A2BE2?style=for-the-badge&logo=archlinux&logoColor=white" alt="View Architecture">
