@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/Project_Status-Ongoing-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Project_Status-Completed-green?style=for-the-badge" />
 
 <!-- Centered Title Banner -->
 <p align="center">
@@ -14,25 +14,18 @@
   <img src="https://img.shields.io/badge/Continuous-Training-black?style=for-the-badge&logo=github-actions&logoColor=white"/>
 </p>
 
----
+<div align="center">
 
-### MLOPS Training Pipeline and Deployment Flowchart
-
-</div>
-p align="center">
-  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="40%" />
-  <img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="40%" />
-</p>
+## Flowchart
 
 <p align="center">
-  <strong>MLOps Flowchart</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Deployment Flowchart</strong>
+  <img src="demo/assets/mlops_flowchart.png" alt="MLOPS Flowchart" width="45%" />
+  <img src="demo/assets/deployment_flowchart.png" alt="Deployment Flowchart" width="45%" />
 </p>
 
-
 ## App Overview:
-![Fraud Detection App](demo/assets/gif_demo1.gif)
 
-<div align="center">
+<img src="demo/assets/gif_demo1.gif" alt="Fraud Detection App" />
 
 ## Technologies & Frameworks Used
 
@@ -46,6 +39,7 @@ p align="center">
 <img src="https://img.shields.io/badge/Matplotlib-%2311557C.svg?style=for-the-badge&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/Seaborn-%233C6F9C.svg?style=for-the-badge&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/VS%20Code-%23007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+
 
 </div>
 
@@ -65,8 +59,6 @@ p align="center">
   - Fetches the **latest trained model** from **AWS S3**
   - Supports **continuous learning**
   - Deployed via **AWS Cloud Services**
-
----
 
 ## 💁️ Project Structure
 
